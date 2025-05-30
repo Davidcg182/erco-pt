@@ -44,7 +44,7 @@ Backend desarrollado con Node.js, TypeScript y PostgreSQL, implementando princip
 
 1. Clonar el repositorio:
 ```bash
-git clone [url-del-repositorio]
+git clone https://github.com/Davidcg182/erco-pt.git
 cd pt-erco
 ```
 
