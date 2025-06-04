@@ -43,6 +43,24 @@ export class User {
     );
   }
 
+  public static fromPersistence(
+    id: string,
+    name: string,
+    balance: number,
+    login: string,
+    hashedPassword: string,
+    createdAt: Date
+  ): User {
+    return new User(
+      id,
+      Name.create(name),
+      balance,
+      Login.create(login),
+      Password.fromHashed(hashedPassword),
+      createdAt
+    );
+  }
+
   public getId(): string {
     return this.id;
   }

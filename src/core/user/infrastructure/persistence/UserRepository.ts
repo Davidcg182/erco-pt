@@ -23,11 +23,13 @@ export class UserRepository implements IUserRepository {
 
     if (!userData) return null;
 
-    return User.create(
+    return User.fromPersistence(
+      userData.id,
       userData.name,
       userData.balance,
       userData.login,
-      userData.password
+      userData.password,
+      userData.created_at
     );
   }
 
@@ -38,11 +40,13 @@ export class UserRepository implements IUserRepository {
 
     if (!userData) return null;
 
-    return User.create(
+    return User.fromPersistence(
+      userData.id,
       userData.name,
       userData.balance,
       userData.login,
-      userData.password
+      userData.password,
+      userData.created_at
     );
   }
 } 

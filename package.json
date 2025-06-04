@@ -1,48 +1,47 @@
 {
-    "name": "pt-erco",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-      "build": "tsc",
-      "lint": "eslint . --ext .ts",
-      "format": "prettier --write .",
-      "api": "nodemon src/app/api/api.ts",
-      "start": "node dist/app.js",
-      "test": "jest",
-      "migrate": "knex migrate:latest",
-      "migrate:rollback": "knex migrate:rollback",
-      "seed": "knex seed:run"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "@eslint/js": "^9.23.0",
-      "@types/cors": "^2.8.17",
-      "@types/express": "^5.0.1",
-      "@types/jest": "^29.5.14",
-      "@types/node": "^22.13.11",
-      "@typescript-eslint/eslint-plugin": "^8.27.0",
-      "@typescript-eslint/parser": "^8.27.0",
-      "eslint": "^9.23.0",
-      "globals": "^16.0.0",
-      "jest": "^29.7.0",
-      "knex": "^3.1.0",
-      "nodemon": "^3.1.9",
-      "ts-jest": "^29.3.0",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.8.2",
-      "typescript-eslint": "^8.27.0",
-      "supertest": "^6.3.3"
-    },
-    "dependencies": {
-      "bcryptjs": "^3.0.2",
-      "cors": "^2.8.5",
-      "dotenv": "^16.4.7",
-      "express": "^4.21.2",
-      "uuid": "^11.1.0",
-      "pg": "^8.11.3"
-    }
+  "name": "pt-erco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "api": "nodemon --watch src --ext ts,json --exec ts-node src/app/api/api.ts",
+    "start": "node dist/app.js",
+    "test": "jest",
+    "migrate": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.11",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.9",
+    "ts-jest": "^29.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.27.0",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "uuid": "^11.1.0",
+    "pg": "^8.11.3"
+  }
 }
-  

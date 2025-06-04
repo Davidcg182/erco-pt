@@ -18,6 +18,10 @@ export class Password {
     return new Password(hashedPassword);
   }
 
+  public static fromHashed(hashedPassword: string): Password {
+    return new Password(hashedPassword);
+  }
+
   public async compare(plainPassword: string): Promise<boolean> {
     return bcrypt.compare(plainPassword, this.value);
   }

@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { CreateUserService } from '../../../../core/user/application/services/CreateUserService';
 import { UserRepository } from '../../../../core/user/infrastructure/persistence/UserRepository';
-import knexInstance from '../../../../infrastructure/database/connection';
+import knexInstance from '../../../../database/services/connection';
 
 export class UserController {
   private createUserService: CreateUserService;
